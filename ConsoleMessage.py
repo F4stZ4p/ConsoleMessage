@@ -16,6 +16,9 @@ async def on_ready():
     while True:
         msg=input()
         server = client.get_server(server)
-        await client.send_message(client.get_channel(ch), msg)
+        try:
+            await client.send_message(client.get_channel(ch), msg)
+        except Exception:
+            pass
 		
-client.run("YOUR TOKEN HERE")
+client.run("PASTE YOUR TOKEN HERE")
